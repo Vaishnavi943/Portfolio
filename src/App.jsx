@@ -62,12 +62,13 @@ export default function App() {
             <a href={d.personalInfo.resumeUrl} download="Resume.pdf" className="rounded-full border border-[#ff6b6b] px-7 py-3 text-sm font-semibold text-[#ff6b6b] hover:bg-[#ff6b6b]/10 transition">My resume</a>
           </div>
         </div>
-        <div className="relative mx-auto w-full max-w-[27rem]">
-          <div className="aspect-square flex items-center justify-center">
-            <img src="/vaishnavi img.png" alt="Vaishnavi" className="h-80 w-80 md:h-[25rem] md:w-[30rem] rounded-full object-cover shadow-2xl" />
+        <div className="relative mx-auto w-full max-w-[20rem] md:max-w-[30rem]">
+          <div className="aspect-square w-full">
+            <img src="/vaishnavi img.png" alt="Vaishnavi" className="h-full w-full rounded-full object-cover shadow-2xl" />
           </div>
         </div>
       </header>
+
 
       {/* 3. About & Future Goal Banner */}
       <section id="about" className="max-w-6xl mx-auto px-6 py-16 border-t border-gray-800 grid md:grid-cols-3 gap-12">
@@ -76,6 +77,8 @@ export default function App() {
           {/* <p className="text-gray-400 leading-relaxed">{d.personalInfo.aboutText}</p> */}
           <p className="text-gray-400 leading-relaxed">{d.personalInfo.aboutText2}</p>
           
+
+          {/* stats */}
           {/* <div className="flex gap-8 pt-4">
             <div><span className="text-3xl font-bold text-[#ff6b6b] block">{d.personalInfo.stats.projects}</span><span className="text-xs text-gray-500">Completed Projects</span></div>
             <div><span className="text-3xl font-bold text-[#ff6b6b] block">{d.personalInfo.stats.satisfaction}</span><span className="text-xs text-gray-500">Client Satisfaction</span></div>
