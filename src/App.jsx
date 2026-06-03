@@ -1,5 +1,6 @@
 
 import './index.css'
+import profileImg from './vaishnavi_img.png';
 
 import  { useState } from 'react';
 import { portfolioData } from './portfolioData';
@@ -64,7 +65,7 @@ export default function App() {
         </div>
         <div className="relative mx-auto w-full max-w-[20rem] md:max-w-[30rem]">
           <div className="aspect-square w-full">
-            <img src="/vaishnavi_img.png" alt="Vaishnavi" className="h-full w-full rounded-full object-cover shadow-2xl" />
+            <img src={profileImg} alt="Vaishnavi" className="h-full w-full rounded-full object-cover shadow-2xl" />
           </div>
         </div>
       </header>
