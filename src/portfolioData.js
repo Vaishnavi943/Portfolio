@@ -1,4 +1,4 @@
-const { VITE_EMAIL = '', VITE_GITHUB = '', VITE_LINKEDIN = '' } = import.meta.env;
+const { VITE_EMAIL = '', VITE_GITHUB = '', VITE_LINKEDIN = '', VITE_RESUME_URL = '' } = import.meta.env;
 
 export const portfolioData = {
   personalInfo: {
@@ -7,8 +7,9 @@ export const portfolioData = {
     email: VITE_EMAIL,
     github: VITE_GITHUB,
     linkedin: VITE_LINKEDIN,
-    resumeUrl: "Resume.pdf", // Add your link here
-    aboutText: "I build delightful, scalable software — from AI-powered apps to full-stack web platforms. I learned to love the process of creating from scratch. Since then, this has led me to software development as it fulfills my love for learning and building things.",
+    resumeUrl: VITE_RESUME_URL,
+    aboutText: "I am a pre-final year B.Tech Computer Science graduate with a passion for building delightful, scalable software — from AI-powered tools to full-stack web platforms...",
+    aboutText2: "I am passionate about leveraging technology to solve real-world problems and create impactful solutions. With a strong foundation in both AI and web development, I enjoy working on projects that push the boundaries of what's possible and deliver value to users.",
     // stats: { projects: "10+", satisfaction: "95%", experience: "10+" }
   },
   

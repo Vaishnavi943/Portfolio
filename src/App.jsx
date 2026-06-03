@@ -62,14 +62,9 @@ export default function App() {
             <a href={d.personalInfo.resumeUrl} download="Resume.pdf" className="rounded-full border border-[#ff6b6b] px-7 py-3 text-sm font-semibold text-[#ff6b6b] hover:bg-[#ff6b6b]/10 transition">My resume</a>
           </div>
         </div>
-        <div className="relative mx-auto w-full max-w-md">
-          <div className="absolute inset-0 rounded-[2rem] border border-[#ff6b6b]/20 opacity-70 blur-xl"></div>
-          <div className="relative overflow-hidden rounded-[2rem] border border-[#ff6b6b]/20 bg-[#121826] shadow-2xl">
-            <div className="aspect-square flex items-center justify-center bg-[radial-gradient(circle_at_center,_rgba(255,107,107,0.16),_transparent_55%)]">
-              <div className="h-72 w-72 md:h-80 md:w-80 rounded-full bg-[#111827] flex items-center justify-center text-6xl md:text-7xl">
-                👨‍💻
-              </div>
-            </div>
+        <div className="relative mx-auto w-full max-w-[27rem]">
+          <div className="aspect-square flex items-center justify-center">
+            <img src="/vaishnavi img.png" alt="Vaishnavi" className="h-80 w-80 md:h-[25rem] md:w-[30rem] rounded-full object-cover shadow-2xl" />
           </div>
         </div>
       </header>
@@ -78,7 +73,8 @@ export default function App() {
       <section id="about" className="max-w-6xl mx-auto px-6 py-16 border-t border-gray-800 grid md:grid-cols-3 gap-12">
         <div className="md:col-span-2 space-y-6">
           <h2 className="text-3xl font-bold text-white">About me</h2>
-          <p className="text-gray-400 leading-relaxed">{d.personalInfo.aboutText}</p>
+          {/* <p className="text-gray-400 leading-relaxed">{d.personalInfo.aboutText}</p> */}
+          <p className="text-gray-400 leading-relaxed">{d.personalInfo.aboutText2}</p>
           
           {/* <div className="flex gap-8 pt-4">
             <div><span className="text-3xl font-bold text-[#ff6b6b] block">{d.personalInfo.stats.projects}</span><span className="text-xs text-gray-500">Completed Projects</span></div>
