@@ -13,7 +13,7 @@ export const portfolioData = {
     // stats: { projects: "10+", satisfaction: "95%", experience: "10+" }
   },
   
-  currentlyExploring: ["Agentic AI", "Multi-Agent Systems", "RAG Applications", "Generative AI", "Full Stack Development", "AWS", "Docker"],
+  currentlyExploring: ["Agentic AI", "Multi-Agent Systems", "System Design", "Cloud services"],
 
   skills: {
     "Programming Languages": ["JavaScript", "Python", "Java", ],
