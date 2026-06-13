@@ -24,6 +24,16 @@ export const portfolioData = {
   },
 
   experiences: [
+
+    {
+      company: "Nathcorp Inc, Ranchi",
+      role: "Generative AI Intern",
+      duration: "June 2026 - July 2026",
+      description: "Built a Rag based Medical Chatbot using Langchain",
+      technologies: ["React", "RAG", "Vector DB", "FastAPI", "HuggingFace", "LangChain", "Pinecone"],
+      achievements: " Implemented a RAG system using LangChain, enabling the chatbot to retrieve relevant medical information from a vector database and generate accurate responses, enhancing user experience and providing valuable insights.",
+      logo: "🏢"
+    },
     {
       company: "Codec Technologies  pvt ltd",
       role: "Machine Learning Intern",
@@ -76,6 +86,8 @@ export const portfolioData = {
   ],
 
   certifications: [
+     { name: "Yuva AI", organization: "National Institute of Electronics and Information Technology (Govt. of India)", date: "2026", link: "https://api-fe.skillindiadigital.gov.in/api/registry-course/getCertificatePresignedUrl/2026061375229125-4dc1218c-e495-452c-b555-aa67ae23cdc3" },
+
     { name: "Building LLM Applications With Prompt Engineering", organization: "Nvidia", date: "2025", link: "https://learn.nvidia.com/certificates?id=YAmc4OFzSfGrRuzWddLw3g" },
 
     { name: "Building Scalable AI Applications", organization: "Microsoft Azure", date: "2025", link: "https://www.linkedin.com/feed/update/urn:li:activity:7357046826077745152/" }
