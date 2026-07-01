@@ -53,7 +53,7 @@ export const portfolioData = {
       description: " By processing Earth observation imagery through a custom-trained ResNet50 Deep Learning model (optimized on the EuroSAT dataset), the application instantly identifies 10 distinct landscape profiles (such as forests, agricultural fields, highways, and residential areas). Furthermore, it features a Before & After comparative engine that analyzes temporal changes across identical regional patches over multi-year cycles, automatically calculating localized environmental risk values and flagging critical deforestation patterns.",
       technologies: ["ResNet50 Deep Learning", "Google Colab (T4 GPU)", "FastAPI", "React.js/Vite", "Railway", "Vercel"],
       github: "https://github.com/Vaishnavi943/Satellite-Image-Classifier-and-Detect-Deforestation",
-      live: "https://satellite-image-classifier-and-dete-beige.vercel.app",
+      live: "https://satellite-image-classifier-and-dete-beige.vercel.app/",
       features: "ResNet50 model training and fine-tuning, Real-time image classification, Before & After comparative analysis for deforestation detection, Environmental risk assessment and alert system."
     },
     {
@@ -62,7 +62,7 @@ export const portfolioData = {
       description: "A full-stack AI travel planning app built on LangGraph multi-agent system, MCP (Model Context Protocol), FastAPI, and React. Users type a travel query and get real-time flight options, hotel recommendations, weather forecasts, and a complete day-by-day itinerary — all powered by AI agents working in parallel.",
       technologies: ["LangGraph", "MCP (Model Context Protocol)", "Langchain", "PostgreSQL", "FastAPI", "React.js/Vite", "Railway", "Vercel", "NeonDB", "Groq (llama-3.3-70b)"],
       github: "https://github.com/Vaishnavi943/Multi-agent-AI-Travel-booking-planner",
-      live: "https://multi-agent-ai-travel-booking-plann.vercel.app",
+      live: "https://multi-agent-ai-travel-booking-plann.vercel.app/",
       features: "Multi-agent architecture for parallel processing, Real-time flight and hotel recommendations, Weather forecasting and day-by-day itinerary generation, Integration with external APIs for comprehensive travel data."
     },
     {
