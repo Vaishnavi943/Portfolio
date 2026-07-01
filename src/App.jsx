@@ -187,8 +187,8 @@ export default function App() {
         </div>
 
 
-        {/* Achievement */}
-        {/* <div>
+        Achievement
+        <div>
           <h2 className="text-2xl font-bold text-white mb-6">Achievements</h2>
           <div className="space-y-4">
             {d.achievements.map((ach, i) => (
@@ -199,7 +199,7 @@ export default function App() {
               </div>
             ))}
           </div>
-        </div> */}
+        </div>
       </section>
 
       {/* Footer Placeholders */}

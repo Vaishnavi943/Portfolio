@@ -16,11 +16,11 @@ export const portfolioData = {
   currentlyExploring: ["Agentic AI", "Multi-Agent Systems", "System Design", "Cloud services"],
 
   skills: {
-    "Programming Languages": ["JavaScript", "Python", "Java", ],
-    "Web Development": ["React", "Node.js", "HTML5", "CSS3", "MongoDB", "Nodejs", "Tailwind CSS", "RestfulAPI", ],
+    "Programming Languages": ["JavaScript", "Python", "Java" ],
+    "Web Development": ["React/Vite", "Node.js", "HTML5", "CSS3", "MongoDB", "Nodejs", "Tailwind CSS", "RestfulAPI", ],
     "Databases & Cloud": ["MongoDB", "SQL", "AWS", "Docker"],
     "Tools & Platforms": ["Git", "GitHub"],
-    "AI & Machine Learning": ["TensorFlow", "PyTorch", "Scikit-learn", "HuggingFace", "LangChain", "RAG Systems", "Agentic AI", "Multi-Agent Systems"]
+    "AI & Machine Learning": ["TensorFlow", "PyTorch", "LangChain", "Langgraph", "Scikit-learn", "HuggingFace",  "RAG Systems", "Agentic AI", "Transformers", "NLP",  "Generative AI"]
   },
 
   experiences: [
@@ -47,6 +47,24 @@ export const portfolioData = {
   ],
 
   projects: [
+    {
+      title: "Satellite Land Image Classifier &  Deforestation Detection.",
+      category: "ResNet50 Deep Learning",
+      description: " By processing Earth observation imagery through a custom-trained ResNet50 Deep Learning model (optimized on the EuroSAT dataset), the application instantly identifies 10 distinct landscape profiles (such as forests, agricultural fields, highways, and residential areas). Furthermore, it features a Before & After comparative engine that analyzes temporal changes across identical regional patches over multi-year cycles, automatically calculating localized environmental risk values and flagging critical deforestation patterns.",
+      technologies: ["ResNet50 Deep Learning", "Google Colab (T4 GPU)", "FastAPI", "React.js/Vite", "Railway", "Vercel"],
+      github: "https://github.com/Vaishnavi943/Satellite-Image-Classifier-and-Detect-Deforestation",
+      live: "https://satellite-image-classifier-and-dete-beige.vercel.app",
+      features: "ResNet50 model training and fine-tuning, Real-time image classification, Before & After comparative analysis for deforestation detection, Environmental risk assessment and alert system."
+    },
+    {
+      title: "MultiAgent AI travel Booking System",
+      category: "Multi-agentic AI",
+      description: "A full-stack AI travel planning app built on LangGraph multi-agent system, MCP (Model Context Protocol), FastAPI, and React. Users type a travel query and get real-time flight options, hotel recommendations, weather forecasts, and a complete day-by-day itinerary — all powered by AI agents working in parallel.",
+      technologies: ["LangGraph", "MCP (Model Context Protocol)", "Langchain", "PostgreSQL", "FastAPI", "React.js/Vite", "Railway", "Vercel", "NeonDB", "Groq (llama-3.3-70b)"],
+      github: "https://github.com/Vaishnavi943/Multi-agent-AI-Travel-booking-planner",
+      live: "https://multi-agent-ai-travel-booking-plann.vercel.app",
+      features: "Multi-agent architecture for parallel processing, Real-time flight and hotel recommendations, Weather forecasting and day-by-day itinerary generation, Integration with external APIs for comprehensive travel data."
+    },
     {
       title: "Built a Custom Vector Database & RAG System from Scratch",
       category: "Generative AI",
@@ -90,10 +108,12 @@ export const portfolioData = {
 
     { name: "Building LLM Applications With Prompt Engineering", organization: "Nvidia", date: "2025", link: "https://learn.nvidia.com/certificates?id=YAmc4OFzSfGrRuzWddLw3g" },
 
+    { name: "Data science", organization: "Infosys Springboard", date: "2025", link: "" },
+
     { name: "Building Scalable AI Applications", organization: "Microsoft Azure", date: "2025", link: "https://www.linkedin.com/feed/update/urn:li:activity:7357046826077745152/" }
   ],
 
   achievements: [
-    { title: "1st Place Hackathon", organization: "TechFest 2025", details: "Built an AI-driven energy saving app." }
+    { title: "3rd Place Hackathon", organization: "College hackathon", details: "Built a rockfall detection system" }
   ]
 };
