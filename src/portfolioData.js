@@ -30,7 +30,7 @@ export const portfolioData = {
       role: "Generative AI Intern",
       duration: "June 2026 - July 2026",
       description: "Built a Rag based Medical Chatbot using Langchain",
-      technologies: ["React", "RAG", "Vector DB", "FastAPI", "HuggingFace", "LangChain", "Pinecone"],
+      technologies: ["React", "RAG",  "FastAPI", "HuggingFace", "LangChain", "Faiss"],
       achievements: " Implemented a RAG system using LangChain, enabling the chatbot to retrieve relevant medical information from a vector database and generate accurate responses, enhancing user experience and providing valuable insights.",
       logo: "🏢"
     },
@@ -64,6 +64,15 @@ export const portfolioData = {
       github: "https://github.com/Vaishnavi943/Multi-agent-AI-Travel-booking-planner",
       live: "https://multi-agent-ai-travel-booking-plann.vercel.app/",
       features: "Multi-agent architecture for parallel processing, Real-time flight and hotel recommendations, Weather forecasting and day-by-day itinerary generation, Integration with external APIs for comprehensive travel data."
+    },
+    {
+      title: "Production Log-to-Eval Dataset Builder",
+      category: "Evals, Data Flywheel",
+      description: "a pipeline that turns real (or realistic) LLM interaction logs into a reviewed, versioned evaluation dataset. The core idea it's built around: eval sets rot if nobody keeps feeding them fresh, real-world failure cases. This automates that feeding loop, with a human still gatekeeping what actually counts as truth",
+      technologies: [ "PostgreSQL", "FastAPI", "React.js/Vite", "Sckit-learn Embedding(tf-idf)", "JONL", "Docker", "Groq (llama-3.3-70b)"],
+      github: "https://github.com/Vaishnavi943/AI_Log-eval-dataset",
+      live: "https://ai-log-eval-dataset.vercel.app/",
+      features: "Automated log ingestion and processing, Human-in-the-loop review for dataset quality, Versioned dataset management and tracking, Integration with LLMs for evaluation and feedback."
     },
     {
       title: "Built a Custom Vector Database & RAG System from Scratch",
