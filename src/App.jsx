@@ -79,12 +79,12 @@ export default function App() {
           <p className="text-gray-400 leading-relaxed">{d.personalInfo.aboutText2}</p>
           
 
-          {/* stats */}
-          {/* <div className="flex gap-8 pt-4">
+          stats
+          <div className="flex gap-8 pt-4">
             <div><span className="text-3xl font-bold text-[#ff6b6b] block">{d.personalInfo.stats.projects}</span><span className="text-xs text-gray-500">Completed Projects</span></div>
             <div><span className="text-3xl font-bold text-[#ff6b6b] block">{d.personalInfo.stats.satisfaction}</span><span className="text-xs text-gray-500">Client Satisfaction</span></div>
-            <div><span className="text-3xl font-bold text-[#ff6b6b] block">{d.personalInfo.stats.experience}</span><span className="text-xs text-gray-500">Years Experience</span></div>
-          </div> */}
+            <div><span className="text-3xl font-bold text-[#ff6b6b] block">{d.personalInfo.stats.internship}</span><span className="text-xs text-gray-500">Internship Positions</span></div>
+          </div>
         </div>
         
         {/* Future Goal Banner */}

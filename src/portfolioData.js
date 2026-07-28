@@ -10,14 +10,14 @@ export const portfolioData = {
     resumeUrl: VITE_RESUME_URL,
     aboutText: "I am a pre-final year B.Tech Computer Science graduate with a passion for building delightful, scalable software — from AI-powered tools to full-stack web platforms...",
     aboutText2: "I am passionate about leveraging technology to solve real-world problems and create impactful solutions. With a strong foundation in both AI and web development, I enjoy working on projects that push the boundaries of what's possible and deliver value to users.",
-    // stats: { projects: "10+", satisfaction: "95%", experience: "10+" }
+    stats: { projects: "10+", satisfaction: "95%", internship: "2" }
   },
   
-  currentlyExploring: ["Agentic AI", "Multi-Agent Systems", "System Design", "Cloud services"],
+  currentlyExploring: ["System Design", "Cloud services"],
 
   skills: {
     "Programming Languages": ["JavaScript", "Python", "Java" ],
-    "Web Development": ["React/Vite", "Node.js", "HTML5", "CSS3", "MongoDB", "Nodejs", "Tailwind CSS", "RestfulAPI", ],
+    "Web Development": ["React/Vite", "Node.js", "HTML5", "CSS3", "MongoDB", "Nodejs", "Redis", "RestfulAPI", "Kubernetes", "Nginx", "Express.js", "Tailwind CSS"],
     "Databases & Cloud": ["MongoDB", "SQL", "AWS", "Docker"],
     "Tools & Platforms": ["Git", "GitHub"],
     "AI & Machine Learning": ["TensorFlow", "PyTorch", "LangChain", "Langgraph", "Scikit-learn", "HuggingFace",  "RAG Systems", "Agentic AI", "Transformers", "NLP",  "Generative AI"]
@@ -55,6 +55,15 @@ export const portfolioData = {
       github: "https://github.com/Vaishnavi943/Satellite-Image-Classifier-and-Detect-Deforestation",
       live: "https://satellite-image-classifier-and-dete-beige.vercel.app/",
       features: "ResNet50 model training and fine-tuning, Real-time image classification, Before & After comparative analysis for deforestation detection, Environmental risk assessment and alert system."
+    },
+    {
+      title: "Rate limiter platform",
+      category: "System Design",
+      description: " A production-style distributed rate limiting platform built around the Token Bucket algorithm, implemented entirely from scratch on top of atomic Redis Lua scripts — no third-party rate-limiting libraries anywhere in the request path.",
+      technologies: ["Redis", "Lua scripting", "JavaScript", "Node.js", "Express.js", "Docker",  "React", "Nginx"],
+      github: "https://github.com/Vaishnavi943/Rate-limiter-platform",
+      live: "#",
+      features: "Distributed rate limiting using Token Bucket algorithm, Atomic Redis Lua scripts for high-performance request handling, Scalable architecture for handling high traffic loads, Real-time monitoring and analytics dashboard."
     },
     {
       title: "MultiAgent AI travel Booking System",
