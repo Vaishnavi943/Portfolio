@@ -10,7 +10,7 @@ export const portfolioData = {
     resumeUrl: VITE_RESUME_URL,
     aboutText: "I am a pre-final year B.Tech Computer Science graduate with a passion for building delightful, scalable software — from AI-powered tools to full-stack web platforms...",
     aboutText2: "I am passionate about leveraging technology to solve real-world problems and create impactful solutions. With a strong foundation in both AI and web development, I enjoy working on projects that push the boundaries of what's possible and deliver value to users.",
-    stats: { projects: "10+", satisfaction: "95%", internship: "2" }
+    stats: { projects: "12+", satisfaction: "80%", internship: "3" }
   },
   
   currentlyExploring: ["System Design", "Cloud services"],
@@ -60,7 +60,7 @@ export const portfolioData = {
       title: "Rate limiter platform",
       category: "System Design",
       description: " A production-style distributed rate limiting platform built around the Token Bucket algorithm, implemented entirely from scratch on top of atomic Redis Lua scripts — no third-party rate-limiting libraries anywhere in the request path.",
-      technologies: ["Redis", "Lua scripting", "JavaScript", "Node.js", "Express.js", "Docker",  "React", "Nginx"],
+      technologies: ["Redis", "JWT Auth", "JavaScript", "Node.js", "Express.js", "Docker",  "React", "Nginx"],
       github: "https://github.com/Vaishnavi943/Rate-limiter-platform",
       live: "#",
       features: "Distributed rate limiting using Token Bucket algorithm, Atomic Redis Lua scripts for high-performance request handling, Scalable architecture for handling high traffic loads, Real-time monitoring and analytics dashboard."

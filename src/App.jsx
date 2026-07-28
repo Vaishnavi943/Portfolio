@@ -82,7 +82,7 @@ export default function App() {
           stats
           <div className="flex gap-8 pt-4">
             <div><span className="text-3xl font-bold text-[#ff6b6b] block">{d.personalInfo.stats.projects}</span><span className="text-xs text-gray-500">Completed Projects</span></div>
-            <div><span className="text-3xl font-bold text-[#ff6b6b] block">{d.personalInfo.stats.satisfaction}</span><span className="text-xs text-gray-500">Client Satisfaction</span></div>
+            <div><span className="text-3xl font-bold text-[#ff6b6b] block">{d.personalInfo.stats.satisfaction}</span><span className="text-xs text-gray-500">Satisfaction</span></div>
             <div><span className="text-3xl font-bold text-[#ff6b6b] block">{d.personalInfo.stats.internship}</span><span className="text-xs text-gray-500">Internship Positions</span></div>
           </div>
         </div>
