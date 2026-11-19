@@ -1,36 +1,44 @@
+
+const me = Object.values(import.meta.glob('./assets/vaishnavi_img.{png,jpg,jpeg,webp}', { eager: true, import: 'default' }))[0];
+
+
+const shots = import.meta.glob('./assets/projects/*.{png,jpg,jpeg,webp}', { eager: true, import: 'default' });
+const shot = (slug) => Object.entries(shots).find(([p]) => p.split('/').pop().split('.')[0] === slug)?.[1];
+
 const { VITE_EMAIL = '', VITE_GITHUB = '', VITE_LINKEDIN = '', VITE_RESUME_URL = '' } = import.meta.env;
 
 export const portfolioData = {
   personalInfo: {
     name: "Kumari Vaishnavi",
-    role: "AI & Web Developer",
+    role: "Software Engineer",
+    image: me,
+    tagline: "I build interactive products  integrated with AI: RAG architecture, AI websites, Multi-agentic AI systems, and more.",
     email: VITE_EMAIL,
     github: VITE_GITHUB,
     linkedin: VITE_LINKEDIN,
     resumeUrl: VITE_RESUME_URL,
-    aboutText: "I am a pre-final year B.Tech Computer Science graduate with a passion for building delightful, scalable software — from AI-powered tools to full-stack web platforms...",
+    aboutText: "I am a final year B.Tech Computer Science graduate with a passion for building delightful, scalable software — from AI-powered tools to full-stack web platforms...",
     aboutText2: "I am passionate about leveraging technology to solve real-world problems and create impactful solutions. With a strong foundation in both AI and web development, I enjoy working on projects that push the boundaries of what's possible and deliver value to users.",
     stats: { projects: "12+", satisfaction: "80%", internship: "3" }
   },
-  
-  currentlyExploring: ["System Design", "Cloud services"],
+
+  currentlyExploring: ["Cyber-Security", "Ethical Hacking"],
 
   skills: {
-    "Programming Languages": ["JavaScript", "Python", "Java" ],
-    "Web Development": ["React/Vite", "Node.js", "HTML5", "CSS3", "MongoDB", "Nodejs", "Redis", "RestfulAPI", "Kubernetes", "Nginx", "Express.js", "Tailwind CSS"],
+    "Programming Languages": ["JavaScript", "Python", "Java"],
+    "Web Development": ["React/Vite", "Node.js", "HTML5", "CSS3", "MongoDB", "Redis", "RestfulAPI", "Kubernetes", "Nginx", "Express.js", "Tailwind CSS"],
     "Databases & Cloud": ["MongoDB", "SQL", "AWS", "Docker"],
-    "Tools & Platforms": ["Git", "GitHub"],
-    "AI & Machine Learning": ["TensorFlow", "PyTorch", "LangChain", "Langgraph", "Scikit-learn", "HuggingFace",  "RAG Systems", "Agentic AI", "Transformers", "NLP",  "Generative AI"]
+    "Tools & Platforms": ["Git", "GitHub", "ChatGPT", "Claude", "HuggingFace"],
+    "AI & Machine Learning": ["LangChain", "Langgraph", "Scikit-learn", "RAG Systems", "Agentic AI", "Transformers", "NLP", "Generative AI"]
   },
 
   experiences: [
-
     {
       company: "Nathcorp Inc, Ranchi",
       role: "Generative AI Intern",
       duration: "June 2026 - July 2026",
       description: "Built a Rag based Medical Chatbot using Langchain",
-      technologies: ["React", "RAG",  "FastAPI", "HuggingFace", "LangChain", "Faiss"],
+      technologies: ["React", "RAG", "FastAPI", "HuggingFace", "LangChain", "Faiss"],
       achievements: " Implemented a RAG system using LangChain, enabling the chatbot to retrieve relevant medical information from a vector database and generate accurate responses, enhancing user experience and providing valuable insights.",
       logo: "🏢"
     },
@@ -43,12 +51,13 @@ export const portfolioData = {
       achievements: " model training, evaluation, and deployment, ensuring efficient and scalable inference.",
       logo: "🏢"
     }
-    
   ],
 
   projects: [
     {
       title: "Satellite Land Image Classifier &  Deforestation Detection.",
+      slug: "satellite",
+      image: shot("satellite"),
       category: "ResNet50 Deep Learning",
       description: " By processing Earth observation imagery through a custom-trained ResNet50 Deep Learning model (optimized on the EuroSAT dataset), the application instantly identifies 10 distinct landscape profiles (such as forests, agricultural fields, highways, and residential areas). Furthermore, it features a Before & After comparative engine that analyzes temporal changes across identical regional patches over multi-year cycles, automatically calculating localized environmental risk values and flagging critical deforestation patterns.",
       technologies: ["ResNet50 Deep Learning", "Google Colab (T4 GPU)", "FastAPI", "React.js/Vite", "Railway", "Vercel"],
@@ -58,15 +67,19 @@ export const portfolioData = {
     },
     {
       title: "Rate limiter platform",
+      slug: "rate-limiter",
+      image: shot("rate-limiter"),
       category: "System Design",
       description: " A production-style distributed rate limiting platform built around the Token Bucket algorithm, implemented entirely from scratch on top of atomic Redis Lua scripts — no third-party rate-limiting libraries anywhere in the request path.",
-      technologies: ["Redis", "JWT Auth", "JavaScript", "Node.js", "Express.js", "Docker",  "React", "Nginx"],
+      technologies: ["Redis", "JWT Auth", "JavaScript", "Node.js", "Express.js", "Docker", "React", "Nginx"],
       github: "https://github.com/Vaishnavi943/Rate-limiter-platform",
       live: "#",
       features: "Distributed rate limiting using Token Bucket algorithm, Atomic Redis Lua scripts for high-performance request handling, Scalable architecture for handling high traffic loads, Real-time monitoring and analytics dashboard."
     },
     {
       title: "MultiAgent AI travel Booking System",
+      slug: "travel-booking",
+      image: shot("travel-booking"),
       category: "Multi-agentic AI",
       description: "A full-stack AI travel planning app built on LangGraph multi-agent system, MCP (Model Context Protocol), FastAPI, and React. Users type a travel query and get real-time flight options, hotel recommendations, weather forecasts, and a complete day-by-day itinerary — all powered by AI agents working in parallel.",
       technologies: ["LangGraph", "MCP (Model Context Protocol)", "Langchain", "PostgreSQL", "FastAPI", "React.js/Vite", "Railway", "Vercel", "NeonDB", "Groq (llama-3.3-70b)"],
@@ -76,58 +89,62 @@ export const portfolioData = {
     },
     {
       title: "Production Log-to-Eval Dataset Builder",
+      slug: "log-eval",
+      image: shot("log-eval"),
       category: "Evals, Data Flywheel",
       description: "a pipeline that turns real (or realistic) LLM interaction logs into a reviewed, versioned evaluation dataset. The core idea it's built around: eval sets rot if nobody keeps feeding them fresh, real-world failure cases. This automates that feeding loop, with a human still gatekeeping what actually counts as truth",
-      technologies: [ "PostgreSQL", "FastAPI", "React.js/Vite", "Sckit-learn Embedding(tf-idf)", "JONL", "Docker", "Groq (llama-3.3-70b)"],
+      technologies: ["PostgreSQL", "FastAPI", "React.js/Vite", "Scikit-learn Embedding(tf-idf)", "JSONL", "Docker", "Groq (llama-3.3-70b)"],
       github: "https://github.com/Vaishnavi943/AI_Log-eval-dataset",
       live: "https://ai-log-eval-dataset.vercel.app/",
       features: "Automated log ingestion and processing, Human-in-the-loop review for dataset quality, Versioned dataset management and tracking, Integration with LLMs for evaluation and feedback."
     },
     {
       title: "Built a Custom Vector Database & RAG System from Scratch",
+      slug: "vector-db",
+      image: shot("vector-db"),
       category: "Generative AI",
       description: " a project that helped me understand what happens behind the scenes of modern AI systems instead of just consuming APIs.",
       technologies: ["Brute Force Search", "KD-Trees", "HNSW (Hierarchical Navigable Small World)"],
       github: "https://github.com/Vaishnavi943/my-own-GPT-VectorDB-",
-      // live: "#",
       features: "Vector Database, Retrieval-Augmented Generation (RAG)"
     },
     {
       title: "MultiAgent AI Research System",
+      slug: "research-agents",
+      image: shot("research-agents"),
       category: "Generative AI",
       description: " This project combines the power of Agentic AI, Multi-Agent Architecture, RAG, and Large Language Models (LLMs) to create an intelligent resource assistant capable of retrieving, processing, and generating responses.",
       technologies: ["LLM", "RAG", "Agentic AI", "Multi-Agent Systems"],
       github: "https://github.com/Vaishnavi943/Multi-Agent-AI-Research-System",
-       live: "https://multi-agent-ai-research-system-eyfkxwjykryyusftpsqkej.streamlit.app/",
-      features: "Real-time news retrieval , PDF document upload functionalit, Context-aware response generation powered by LLMs"
+      live: "https://multi-agent-ai-research-system-eyfkxwjykryyusftpsqkej.streamlit.app/",
+      features: "Real-time news retrieval, PDF document upload functionality, Context-aware response generation powered by LLMs"
     },
     {
       title: "WanderLust- Travel and Accommodation Platform",
+      slug: "wanderlust",
+      image: shot("wanderlust"),
       category: "Full Stack Development",
       description: " Built WanderHub, a full-stack travel listing web application enabling users to create, manage, and review listings, with secure authentication and session handling.",
-      technologies: ["Node.js", "Expressjs", "MongoDB", "Passport.js",  "Tailwind CSS"],
+      technologies: ["Node.js", "Expressjs", "MongoDB", "Passport.js", "Tailwind CSS"],
       github: "https://github.com/Vaishnavi943/wanderHub_Project",
-      //  live: "https://multi-agent-ai-research-system-eyfkxwjykryyusftpsqkej.streamlit.app/",
-      features: "Developed RESTful architecture with robust error handling , Implemented secure user authentication and session management using Passport.js, Designed a responsive UI with Tailwind CSS, ensuring seamless user experience across devices."
+      features: "Developed RESTful architecture with robust error handling, Implemented secure user authentication and session management using Passport.js, Designed a responsive UI with Tailwind CSS, ensuring seamless user experience across devices."
     },
     {
       title: "Plant Disease Detection System",
+      slug: "plant-disease",
+      image: shot("plant-disease"),
       category: "Machine Learning",
       description: "Built a Plant Disease Prediction system using Convolutional Neural Networks (CNN), trained on a dataset of 53,000+ plant images, achieving 84% accuracy in classifying healthy and diseased leaves",
       technologies: ["Python", "TensorFlow", "CNN", "Image processing", "Numpy", "Pandas"],
       github: "https://github.com/Vaishnavi943/ML_Project/blob/main/PlantDieseasePrediction_CNN_Image_Classifier.ipynb",
-      //  live: "#",
       features: "Image preprocessing, CNN architecture design, model training and evaluation, and deployment using Streamlit for real-time inference."
     }
   ],
 
   certifications: [
-     { name: "Yuva AI", organization: "National Institute of Electronics and Information Technology (Govt. of India)", date: "2026", link: "https://api-fe.skillindiadigital.gov.in/api/registry-course/getCertificatePresignedUrl/2026061375229125-4dc1218c-e495-452c-b555-aa67ae23cdc3" },
-
+    { name: "Yuva AI", organization: "National Institute of Electronics and Information Technology (Govt. of India)", date: "2026", link: "https://api-fe.skillindiadigital.gov.in/api/registry-course/getCertificatePresignedUrl/2026061375229125-4dc1218c-e495-452c-b555-aa67ae23cdc3" },
     { name: "Building LLM Applications With Prompt Engineering", organization: "Nvidia", date: "2025", link: "https://learn.nvidia.com/certificates?id=YAmc4OFzSfGrRuzWddLw3g" },
-
     { name: "Data science", organization: "Infosys Springboard", date: "2025", link: "" },
-
     { name: "Building Scalable AI Applications", organization: "Microsoft Azure", date: "2025", link: "https://www.linkedin.com/feed/update/urn:li:activity:7357046826077745152/" }
   ],
 
